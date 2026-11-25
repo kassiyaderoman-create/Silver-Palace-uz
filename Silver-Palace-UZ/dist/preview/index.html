@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uz">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silvernianing ikki manzarasi · Silver Palace UZ</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#110e19;color:#fff1d4;font-family:Georgia,serif}
+.stage{min-height:100svh;position:relative;isolation:isolate;display:grid;align-content:space-between;padding:clamp(20px,5vw,76px);background:center/cover url('/official/home_bg.webp');touch-action:pan-y}
+.stage[data-scene="1"]{background-image:url('/city.webp')}
+.stage::after,canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+canvas{z-index:-2}.stage::after{content:"";z-index:-1;background:linear-gradient(90deg,#0a0816e8,transparent 76%),linear-gradient(0deg,#0a0816e8,transparent 55%)}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px}header img{width:min(34vw,185px)}a{color:inherit}
+main{padding-top:14vh}h1{font-size:clamp(3.5rem,10vw,9rem);margin:0;line-height:1;font-weight:400;letter-spacing:-.06em}p{max-width:32ch;line-height:1.5}
+.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+button{border:1px solid #ecd6ab90;background:#181326c9;color:inherit;padding:12px 16px;min-height:44px;font:inherit;cursor:pointer}
+button[aria-pressed="true"]{background:#ecd6ab;color:#1c1427}
+:focus-visible{outline:2px solid white;outline-offset:4px}
+</style>
+<section class="stage" data-scene="0">
+<canvas hidden aria-hidden="true"></canvas>
+<header><img src="/official/en-us.J3q3qYlr.svg" alt="Silver Palace"><a href="/">Saytga qaytish ↗</a></header>
+<main>
+<h1 id="scene-title" aria-live="polite">Detektiv</h1>
+<p id="scene-description">Silvernianing yashirin sirlarini och.</p>
+<div class="controls" aria-label="Manzarani tanlash">
+<button type="button" data-scene="0" aria-pressed="true">Detektiv</button>
+<button type="button" data-scene="1" aria-pressed="false">Silvernia</button>
+</div>
+</main>
+</section>
+<script type="module" src="/preview/transition.js"></script>
+</html>
